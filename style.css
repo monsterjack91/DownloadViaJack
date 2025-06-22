@@ -1,278 +1,250 @@
-/* 🌑 Basic Reset */
-* {
+/* Reset & Base */
+body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-
-body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: #000; /* black background */
+  background-color: #000;
   color: #fff;
   overflow-x: hidden;
 }
 
-/* 🌟 Hero Section */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Hero Section */
 .hero {
-  padding: 60px 20px;
   text-align: center;
+  padding: 80px 20px 40px;
 }
 
 .title {
-  font-size: 3rem;
+  font-size: 2.8rem;
+  background: linear-gradient(90deg, #00ffe1, #0ff, #00ffe1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: glow 3s infinite;
   font-weight: bold;
-  color: #00fff2;
-  text-shadow: 0 0 15px #00fff2, 0 0 40px #00fff2;
-  animation: pulse 2s infinite;
 }
 
-@keyframes pulse {
-  0% { text-shadow: 0 0 5px #00fff2; }
-  50% { text-shadow: 0 0 25px #00fff2; }
-  100% { text-shadow: 0 0 5px #00fff2; }
+@keyframes glow {
+  0% { text-shadow: 0 0 5px #00ffe1; }
+  50% { text-shadow: 0 0 15px #00ffe1; }
+  100% { text-shadow: 0 0 5px #00ffe1; }
 }
 
 .tagline {
-  margin-top: 10px;
   font-size: 1.2rem;
   color: #ccc;
+  margin-top: 10px;
 }
 
-/* 📥 Downloader Box */
 .downloader-box {
-  margin: 30px auto;
-  max-width: 500px;
-  padding: 20px;
+  margin-top: 30px;
+  display: inline-block;
   background: #111;
-  border-radius: 15px;
-  box-shadow: 0 0 20px #00fff2;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 0 10px #00ffe1;
 }
 
-.downloader-box input,
-.downloader-box select,
-.downloader-box button {
-  width: 100%;
-  margin-bottom: 15px;
+input, select, button {
   padding: 12px;
-  border: none;
+  margin: 10px 5px;
   border-radius: 10px;
+  border: none;
   font-size: 1rem;
+  outline: none;
 }
 
-.downloader-box input {
-  background: #222;
+input {
+  width: 250px;
+  background-color: #222;
   color: #fff;
 }
 
-.downloader-box select {
-  background: #111;
-  color: #0ff;
+select {
+  background-color: #222;
+  color: #fff;
 }
 
-.downloader-box button {
-  background: #00fff2;
+button#downloadBtn {
+  background-color: #00ffe1;
   color: #000;
   font-weight: bold;
-  transition: transform 0.3s;
+  cursor: pointer;
+  box-shadow: 0 0 10px #00ffe1;
 }
 
-.downloader-box button:hover {
-  transform: scale(1.05);
-}
-
-/* 🌐 Language Select */
-.lang-select {
-  margin: 20px auto;
-  text-align: center;
-}
-
-.lang-select select {
-  padding: 10px;
-  border-radius: 10px;
-  background: #222;
-  color: #fff;
-  font-size: 1rem;
-  box-shadow: 0 0 10px #0ff;
-  transition: all 0.3s ease-in-out;
-}
-
-.lang-select select:hover {
-  background: #00fff2;
-  color: #000;
-}
-
-/* 🎥 Supported Platforms */
+/* Platforms Section */
 .platforms {
-  padding: 40px 20px;
   text-align: center;
+  margin: 60px 20px;
 }
 
 .glow-title {
   font-size: 2rem;
-  margin-bottom: 25px;
-  text-shadow: 0 0 10px #0ff;
-  color: #0ff;
+  color: #00ffe1;
+  margin-bottom: 20px;
 }
 
 .app-icons {
   display: flex;
   flex-direction: column;
-  gap: 20px;
   align-items: center;
+  gap: 20px;
 }
 
-.app-icons button {
+.app-icons a button {
+  background: #111;
+  border: 2px solid #00ffe1;
+  padding: 12px 20px;
+  border-radius: 12px;
+  color: #00ffe1;
   display: flex;
   align-items: center;
-  gap: 15px;
-  background: #111;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 15px;
-  box-shadow: 0 0 15px #0ff;
-  transition: transform 0.2s ease;
-}
-
-.app-icons button:hover {
-  transform: scale(1.05);
+  gap: 10px;
+  width: 260px;
+  justify-content: center;
 }
 
 .app-icons img {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
+  width: 40px;
+  height: 40px;
 }
 
-.app-icons span {
-  color: #fff;
-  font-size: 1.1rem;
-  font-weight: bold;
-}
-
-/* 📲 App Install */
-.install-app,
-.how-to-use {
+/* How To Use & App Install */
+.how-to-use, .install-app {
   text-align: center;
-  padding: 40px 20px;
-  background: #111;
-  margin-top: 20px;
-  border-radius: 20px;
-  max-width: 800px;
-  margin-inline: auto;
-  box-shadow: 0 0 15px #00fff2;
+  margin: 60px 20px;
 }
 
 .install-btn {
-  background: #00fff2;
+  background: #00ffe1;
   color: #000;
-  padding: 12px 25px;
-  border-radius: 12px;
-  font-size: 1rem;
+  padding: 12px 30px;
   border: none;
+  border-radius: 20px;
+  font-size: 1.1rem;
   cursor: pointer;
+  box-shadow: 0 0 10px #00ffe1;
 }
 
-/* 🔍 How to Use Steps */
-.steps {
-  display: grid;
-  gap: 15px;
-  margin-top: 20px;
-  color: #ccc;
-}
-
-/* 🧰 Tool Section */
+/* Tools Section */
 .tools {
-  padding: 50px 20px;
   text-align: center;
-  background: #000;
+  margin: 60px 20px;
 }
 
 .tool-boxes {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 20px;
-  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 20px;
 }
 
 .tool {
-  padding: 15px;
-  background: #111;
-  color: #0ff;
-  text-decoration: none;
+  background-color: #111;
+  border: 1px solid #00ffe1;
+  border-radius: 12px;
+  padding: 10px 20px;
+  color: #00ffe1;
   font-weight: bold;
-  border-radius: 15px;
-  box-shadow: 0 0 10px #0ff;
-  transition: background 0.3s;
+  transition: all 0.3s ease;
 }
 
 .tool:hover {
-  background: #00fff2;
+  background: #00ffe1;
   color: #000;
 }
 
-/* 🔚 Footer */
+/* Footer */
 .footer {
-  text-align: center;
+  background-color: #111;
   padding: 30px 20px;
-  background: #111;
-  color: #888;
+  text-align: center;
+  color: #aaa;
   font-size: 0.9rem;
+  margin-top: 50px;
 }
 
-.footer a {
-  color: #0ff;
+.footer-links a {
   margin: 0 10px;
-  text-decoration: none;
-}
-
-.footer a:hover {
-  text-decoration: underline;
+  color: #00ffe1;
 }
 
 .powered {
   margin-top: 10px;
-  color: #777;
+  color: #666;
 }
 
-/* 💬 Support + 🌙 Dark Mode Button */
-#supportBtn,
+/* Language Selector */
+.lang-select {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.lang-select select {
+  background-color: #222;
+  color: #fff;
+  border: 1px solid #00ffe1;
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px #00ffe1;
+}
+
+/* Dark Mode Toggle (Chat Style) */
 #darkToggle {
   position: fixed;
-  z-index: 99;
-  padding: 10px 12px;
-  font-size: 20px;
-  border-radius: 50%;
-  border: none;
-  color: #fff;
-  background: #00fff2;
-  box-shadow: 0 0 15px #0ff;
-  cursor: pointer;
-}
-
-#supportBtn {
-  bottom: 20px;
-  right: 20px;
-}
-
-#darkToggle {
   top: 20px;
   right: 20px;
+  background: #00ffe1;
+  border: none;
+  padding: 14px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: 0 0 15px #00ffe1;
+  transition: all 0.3s ease;
+  z-index: 1000;
 }
 
-/* 🌓 Dark Mode */
-body.dark-mode {
-  background-color: #111;
-  color: #eee;
+/* Support Button */
+#supportBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #00ffe1;
+  border: none;
+  padding: 12px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: 0 0 10px #00ffe1;
+  z-index: 1000;
 }
 
-body.dark-mode .downloader-box,
-body.dark-mode .install-app,
-body.dark-mode .how-to-use,
-body.dark-mode .tool-boxes .tool,
-body.dark-mode .footer {
-  background: #222;
-}
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 2.1rem;
+  }
 
-body.dark-mode .glow-title {
-  color: #00fff2;
+  .downloader-box {
+    width: 90%;
+  }
+
+  input {
+    width: 90%;
+  }
+
+  .app-icons a button {
+    width: 90%;
+  }
+
+  .tool {
+    width: 90%;
+  }
 }
