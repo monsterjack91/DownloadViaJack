@@ -1,0 +1,278 @@
+/* 🌑 Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #000; /* black background */
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* 🌟 Hero Section */
+.hero {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #00fff2;
+  text-shadow: 0 0 15px #00fff2, 0 0 40px #00fff2;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { text-shadow: 0 0 5px #00fff2; }
+  50% { text-shadow: 0 0 25px #00fff2; }
+  100% { text-shadow: 0 0 5px #00fff2; }
+}
+
+.tagline {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+/* 📥 Downloader Box */
+.downloader-box {
+  margin: 30px auto;
+  max-width: 500px;
+  padding: 20px;
+  background: #111;
+  border-radius: 15px;
+  box-shadow: 0 0 20px #00fff2;
+}
+
+.downloader-box input,
+.downloader-box select,
+.downloader-box button {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+.downloader-box input {
+  background: #222;
+  color: #fff;
+}
+
+.downloader-box select {
+  background: #111;
+  color: #0ff;
+}
+
+.downloader-box button {
+  background: #00fff2;
+  color: #000;
+  font-weight: bold;
+  transition: transform 0.3s;
+}
+
+.downloader-box button:hover {
+  transform: scale(1.05);
+}
+
+/* 🌐 Language Select */
+.lang-select {
+  margin: 20px auto;
+  text-align: center;
+}
+
+.lang-select select {
+  padding: 10px;
+  border-radius: 10px;
+  background: #222;
+  color: #fff;
+  font-size: 1rem;
+  box-shadow: 0 0 10px #0ff;
+  transition: all 0.3s ease-in-out;
+}
+
+.lang-select select:hover {
+  background: #00fff2;
+  color: #000;
+}
+
+/* 🎥 Supported Platforms */
+.platforms {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.glow-title {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  text-shadow: 0 0 10px #0ff;
+  color: #0ff;
+}
+
+.app-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.app-icons button {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: #111;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px #0ff;
+  transition: transform 0.2s ease;
+}
+
+.app-icons button:hover {
+  transform: scale(1.05);
+}
+
+.app-icons img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.app-icons span {
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+/* 📲 App Install */
+.install-app,
+.how-to-use {
+  text-align: center;
+  padding: 40px 20px;
+  background: #111;
+  margin-top: 20px;
+  border-radius: 20px;
+  max-width: 800px;
+  margin-inline: auto;
+  box-shadow: 0 0 15px #00fff2;
+}
+
+.install-btn {
+  background: #00fff2;
+  color: #000;
+  padding: 12px 25px;
+  border-radius: 12px;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+/* 🔍 How to Use Steps */
+.steps {
+  display: grid;
+  gap: 15px;
+  margin-top: 20px;
+  color: #ccc;
+}
+
+/* 🧰 Tool Section */
+.tools {
+  padding: 50px 20px;
+  text-align: center;
+  background: #000;
+}
+
+.tool-boxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.tool {
+  padding: 15px;
+  background: #111;
+  color: #0ff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 15px;
+  box-shadow: 0 0 10px #0ff;
+  transition: background 0.3s;
+}
+
+.tool:hover {
+  background: #00fff2;
+  color: #000;
+}
+
+/* 🔚 Footer */
+.footer {
+  text-align: center;
+  padding: 30px 20px;
+  background: #111;
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.footer a {
+  color: #0ff;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.powered {
+  margin-top: 10px;
+  color: #777;
+}
+
+/* 💬 Support + 🌙 Dark Mode Button */
+#supportBtn,
+#darkToggle {
+  position: fixed;
+  z-index: 99;
+  padding: 10px 12px;
+  font-size: 20px;
+  border-radius: 50%;
+  border: none;
+  color: #fff;
+  background: #00fff2;
+  box-shadow: 0 0 15px #0ff;
+  cursor: pointer;
+}
+
+#supportBtn {
+  bottom: 20px;
+  right: 20px;
+}
+
+#darkToggle {
+  top: 20px;
+  right: 20px;
+}
+
+/* 🌓 Dark Mode */
+body.dark-mode {
+  background-color: #111;
+  color: #eee;
+}
+
+body.dark-mode .downloader-box,
+body.dark-mode .install-app,
+body.dark-mode .how-to-use,
+body.dark-mode .tool-boxes .tool,
+body.dark-mode .footer {
+  background: #222;
+}
+
+body.dark-mode .glow-title {
+  color: #00fff2;
+}
